@@ -6,6 +6,7 @@ import Navbar from './Navbar';
 import GamePanel from './GamePanel';
 import ManUtd from './ManUtd';
 import Example from './Example';
+import LeagueTable from './LeagueTable';
 
 const RootStack = createStackNavigator(
   {
@@ -25,9 +26,17 @@ const RootStack = createStackNavigator(
         headerTitleStyle: {color: '#fff', fontWeight: 'bold', fontSize: 25 },
       }),
     },
+    Table: {
+      screen: LeagueTable,
+      navigationOptions: ({ navigation }) => ({
+        title: 'PREMIER LEAGUE',
+        headerStyle: {backgroundColor:'#38003C'},
+        headerTitleStyle: {color: '#fff', fontWeight: 'bold', fontSize: 25 },
+      }),
+    },
   },
   {
-    initialRouteName: 'Home',
+    initialRouteName: 'Table',
   }
 );
 
