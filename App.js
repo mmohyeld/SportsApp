@@ -1,17 +1,30 @@
 import React from 'react';
 import {Alert, ScrollView, StyleSheet, StatusBar, Text, View } from 'react-native';
 import {Button, Card, Icon} from 'react-native-elements';
-import { createStackNavigator } from 'react-navigation';
+import { createStackNavigator, createMaterialTopTabNavigator } from 'react-navigation';
 import Navbar from './Navbar';
 import GamePanel from './GamePanel';
 import ManUtd from './ManUtd';
 import Example from './Example';
 import LeagueTable from './LeagueTable';
 
+const TabStack = createMaterialTopTabNavigator(
+  {
+    Fixtures: {screen: Example},
+    Table: {screen: LeagueTable},
+  },
+  {
+    tabBarOptions: {
+      style: {backgroundColor:'#38003C'},
+    },
+  },
+  
+);
+
 const RootStack = createStackNavigator(
   {
     Home: {
-      screen: Example,
+      screen: TabStack,
       navigationOptions: ({ navigation }) => ({
         title: 'PREMIER LEAGUE',
         headerStyle: {backgroundColor:'#38003C'},
@@ -26,18 +39,10 @@ const RootStack = createStackNavigator(
         headerTitleStyle: {color: '#fff', fontWeight: 'bold', fontSize: 25 },
       }),
     },
-    Table: {
-      screen: LeagueTable,
-      navigationOptions: ({ navigation }) => ({
-        title: 'PREMIER LEAGUE',
-        headerStyle: {backgroundColor:'#38003C'},
-        headerTitleStyle: {color: '#fff', fontWeight: 'bold', fontSize: 25 },
-      }),
-    },
   },
   {
-    initialRouteName: 'Table',
-  }
+    initialRouteName: 'Home'
+  },
 );
 
 export default class App extends React.Component {
