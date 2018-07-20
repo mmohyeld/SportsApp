@@ -1,5 +1,12 @@
 export default {
-    mun:[
+    manager:[
+        {
+            name: 'José Mourinho',
+            avatar_url: 'https://premierleague-static-files.s3.amazonaws.com/premierleague/photos/players/250x250/man134.png',
+            subtitle: 'Manager'
+        },
+    ],
+    players:[
         {
             name: 'David De Gea',
             avatar_url: 'https://premierleague-static-files.s3.amazonaws.com/premierleague/photos/players/250x250/p51940.png',

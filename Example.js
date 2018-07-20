@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, TouchableHighlight, Image, StatusBar, ScrollView, Alert } from 'react-native';
+import Matchweek1 from './Matchweek1';
 
 export default class Example extends React.Component {
     render() {
@@ -15,7 +16,7 @@ export default class Example extends React.Component {
                     <Text style={styles.dayTitle}>Friday 10 August</Text>
                     <TouchableHighlight 
                         underlayColor='transparent'
-                        onPress={() => this.props.navigation.navigate('Details')}>
+                        onPress={() => this.props.navigation.navigate('Game')}>
                         <View style={[styles.panelContainer, {backgroundColor: '#e90052'}]}>
                             <View style={styles.team}>
                                 <Image style={styles.teamLogo} source={require('./assets/images/premier_league/mun.png')} />
@@ -32,6 +33,31 @@ export default class Example extends React.Component {
                             </View>
                         </View>
                     </TouchableHighlight>
+                    <Text style={styles.dayTitle}>Saturday 11 August</Text>
+                    {
+                      Matchweek1['saturday'].map((l, i) => (
+                        <TouchableHighlight 
+                            underlayColor='transparent'
+                            onPress={() => this.props.navigation.navigate('Game')}
+                            key={l.id}>
+                            <View style={[styles.panelContainer, {backgroundColor: '#e90052'}]}>
+                                <View style={styles.team}>
+                                    <Image style={styles.teamLogo} source={l.homeLogo} />
+                                    <Text style={styles.teamName}>{l.homeTeam}</Text>
+                                </View>
+
+                                <View style={styles.gameInfo}>
+                                    <Text style={[styles.infoProcess, styles.processUnstart]}>{l.time}</Text>
+                                </View>
+
+                                <View style={styles.team}>
+                                    <Image style={styles.teamLogo} source={l.awayLogo} />
+                                    <Text style={styles.teamName}>{l.awayTeam}</Text>
+                                </View>
+                            </View>
+                        </TouchableHighlight>
+                      ))
+                    }
                 </ScrollView>
             </View>
         );

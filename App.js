@@ -7,6 +7,7 @@ import GamePanel from './GamePanel';
 import ManUtd from './ManUtd';
 import Example from './Example';
 import LeagueTable from './LeagueTable';
+import MunLei from './MunLei';
 
 const TabStack = createMaterialTopTabNavigator(
   {
@@ -33,6 +34,14 @@ const RootStack = createStackNavigator(
     },
     Details: {
       screen: ManUtd,
+      navigationOptions: ({ navigation }) => ({
+        title: 'PREMIER LEAGUE',
+        headerStyle: {backgroundColor:'#38003C'},
+        headerTitleStyle: {color: '#fff', fontWeight: 'bold', fontSize: 25 },
+      }),
+    },
+    Game: {
+      screen: MunLei,
       navigationOptions: ({ navigation }) => ({
         title: 'PREMIER LEAGUE',
         headerStyle: {backgroundColor:'#38003C'},

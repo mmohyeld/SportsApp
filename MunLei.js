@@ -3,46 +3,7 @@ import { StyleSheet, Text, View, Component, TouchableHighlight, Image, SectionLi
 import { List, ListItem } from 'react-native-elements';
 import ManUtdPlayers from './ManUtdPlayers';
 
-class Roster extends React.Component {
-  render() {
-    return (
-      <ScrollView>
-        <View style={styles.listContainer}>
-          <List containerStyle={{marginBottom: 20}}>
-            {
-              ManUtdPlayers['manager'].map((l, i) => (
-              <ListItem
-                roundAvatar
-                avatar={{uri:l.avatar_url}}
-                key={i}
-                title={l.name}
-                subtitle={l.subtitle}
-              />
-              ))
-            }
-          </List>
-        </View>
-        <View style={styles.listContainer}>
-          <List containerStyle={{marginBottom: 20}}>
-            {
-              ManUtdPlayers['players'].map((l, i) => (
-              <ListItem
-                roundAvatar
-                avatar={{uri:l.avatar_url}}
-                key={i}
-                title={l.name}
-                subtitle={l.subtitle}
-              />
-              ))
-            }
-          </List>
-        </View>
-      </ScrollView>
-    );
-  }
-}
-
-export default class ManUtd extends React.Component {
+export default class MunLei extends React.Component {
   render() {
     return (
       <View style={styles.container}>
@@ -54,8 +15,13 @@ export default class ManUtd extends React.Component {
             <Image style={styles.teamLogo} source={require('./assets/images/premier_league/mun.png')} />
             <Text style={styles.teamName}>Manchester United</Text>
           </View>
+
+          <View style={styles.team}>
+            <Image style={styles.teamLogo} source={require('./assets/images/premier_league/lei.png')} />
+            <Text style={styles.teamName}>Leicester City</Text>
+          </View>
         </View>
-        <Roster />
+        <Text style={styles.title}>Preview</Text>
       </View>
     );
   }
