@@ -1,39 +1,44 @@
 import React from 'react';
 import { StyleSheet, Text, View, TouchableHighlight, Image, StatusBar, ScrollView, Alert } from 'react-native';
 import { List, ListItem } from 'react-native-elements';
+import { Table, TableWrapper, Row, Rows, Col, Cols, Cell } from 'react-native-table-component';
 import PremTeams from './PremTeams';
 
 export default class LeagueTable extends React.Component {
-    render() {
-        return (
-            <View style={styles.container}>
-                <StatusBar 
-                    barStyle='light-content'
+  render() {
+    return (
+      <View style={styles.container}>
+        <StatusBar 
+          barStyle='light-content'
+        />
+        <View style={styles.weekContainer}>
+          <Text style={styles.weekTitle}>League Table</Text>
+        </View>
+        <ScrollView>
+          <Table borderStyle={{borderWidth: 2, borderColor: '#c8e1ff'}}>
+            <Row data={PremTeams['table']} style={styles.tableHead} textStyle={styles.tableText}/>
+            <Row data={PremTeams['ARS']} textStyle={styles.tableText}/>
+          </Table>
+          <View style={styles.listContainer}>
+            <List containerStyle={{marginBottom: 20}}>
+              {
+                PremTeams['teams'].map((l, i) => (
+                <ListItem
+                  roundAvatar
+                  avatar={l.avatar_url}
+                  key={i}
+                  title={l.name}
+                  subtitle={l.subtitle}
+                  onPress={() => this.props.navigation.navigate('Details')}
                 />
-                <View style={styles.weekContainer}>
-                    <Text style={styles.weekTitle}>League Table</Text>
-                </View>
-                <ScrollView>
-                    <View style={styles.listContainer}>
-                        <List containerStyle={{marginBottom: 20}}>
-                            {
-                                PremTeams['teams'].map((l, i) => (
-                                <ListItem
-                                    roundAvatar
-                                    avatar={l.avatar_url}
-                                    key={i}
-                                    title={l.name}
-                                    subtitle={l.subtitle}
-                                    onPress={() => this.props.navigation.navigate('Details')}
-                                />
-                                ))
-                            }
-                        </List>
-                    </View>
-                </ScrollView>
-            </View>
-        );
-    }
+                ))
+              }
+            </List>
+          </View>
+        </ScrollView>
+      </View>
+    );
+  }
 }
 
 const styles = StyleSheet.create({
@@ -106,5 +111,12 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginTop: 10,
     marginBottom: 10
+  },
+  tableHead: {
+    height: 40,
+    backgroundColor: '#f1f8ff',
+  },
+  tableText: {
+    margin: 6,
   },
 });

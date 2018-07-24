@@ -22,6 +22,8 @@ export default class MunLei extends React.Component {
           </View>
         </View>
         <Text style={styles.title}>Preview</Text>
+        <Text style={styles.paragraph}>The Premier League is set to kick-off on August 10th with showdown at Old Trafford between
+        Manchester United and Leicester City.</Text>
       </View>
     );
   }
@@ -72,6 +74,12 @@ const styles = StyleSheet.create({
     color: '#38003C',
     fontWeight: 'bold',
     fontSize: 20,
+    position: 'relative',
+    marginBottom: 10
+  },
+  paragraph: {
+    color: '#38003C',
+    fontSize: 16,
     position: 'relative',
     marginBottom: 10
   },

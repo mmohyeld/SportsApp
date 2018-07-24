@@ -58,6 +58,31 @@ export default class Example extends React.Component {
                         </TouchableHighlight>
                       ))
                     }
+                    <Text style={styles.dayTitle}>Sunday 12 August</Text>
+                    {
+                      Matchweek1['sunday'].map((l, i) => (
+                        <TouchableHighlight 
+                            underlayColor='transparent'
+                            onPress={() => this.props.navigation.navigate('Game')}
+                            key={l.id}>
+                            <View style={[styles.panelContainer, {backgroundColor: '#e90052'}]}>
+                                <View style={styles.team}>
+                                    <Image style={styles.teamLogo} source={l.homeLogo} />
+                                    <Text style={styles.teamName}>{l.homeTeam}</Text>
+                                </View>
+
+                                <View style={styles.gameInfo}>
+                                    <Text style={[styles.infoProcess, styles.processUnstart]}>{l.time}</Text>
+                                </View>
+
+                                <View style={styles.team}>
+                                    <Image style={styles.teamLogo} source={l.awayLogo} />
+                                    <Text style={styles.teamName}>{l.awayTeam}</Text>
+                                </View>
+                            </View>
+                        </TouchableHighlight>
+                      ))
+                    }
                 </ScrollView>
             </View>
         );
