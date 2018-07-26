@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, Component, TouchableHighlight, Image, SectionLi
 import { List, ListItem } from 'react-native-elements';
 import ManUtdPlayers from './ManUtdPlayers';
 
-export default class ManUtd extends React.Component {
+export default class PlayerPage extends React.Component {
   render() {
     return (
       <View style={styles.container}>
@@ -12,43 +12,15 @@ export default class ManUtd extends React.Component {
         />
         <View style={styles.headerContainer}>
           <View style={styles.team}>
-            <Image style={styles.teamLogo} source={require('./assets/images/premier_league/mun.png')} />
-            <Text style={styles.teamName}>Manchester United</Text>
+            <Image style={styles.teamLogo} source={{uri:ManUtdPlayers['players'][0].avatar_url}} />
+            <Text style={styles.teamName}>David De Gea</Text>
           </View>
         </View>
-        <ScrollView>
-          <View style={styles.listContainer}>
-            <List containerStyle={{marginBottom: 20}}>
-              {
-                ManUtdPlayers['manager'].map((l, i) => (
-                <ListItem
-                  roundAvatar
-                  avatar={{uri:l.avatar_url}}
-                  key={i}
-                  title={l.name}
-                  subtitle={l.subtitle}
-                />
-                ))
-              }
-            </List>
-          </View>
-          <View style={styles.listContainer}>
-            <List containerStyle={{marginBottom: 20}}>
-              {
-                ManUtdPlayers['players'].map((l, i) => (
-                <ListItem
-                  roundAvatar
-                  avatar={{uri:l.avatar_url}}
-                  key={i}
-                  title={l.name}
-                  subtitle={l.subtitle}
-                  onPress={() => this.props.navigation.navigate('Player')}
-                />
-                ))
-              }
-            </List>
-          </View>
-        </ScrollView>
+        <Text style={styles.title}>Personal Details</Text>
+        <Text style={styles.paragraph}>Nationality: Spain</Text>
+        <Text style={styles.paragraph}>D.O.B.:  07/11/1990</Text>
+        <Text style={styles.paragraph}>Age: 27</Text>
+        <Text style={styles.paragraph}>Height:  192cm</Text>
       </View>
     );
   }
@@ -99,6 +71,12 @@ const styles = StyleSheet.create({
     color: '#38003C',
     fontWeight: 'bold',
     fontSize: 20,
+    position: 'relative',
+    marginBottom: 10
+  },
+  paragraph: {
+    color: '#38003C',
+    fontSize: 16,
     position: 'relative',
     marginBottom: 10
   },

@@ -1,6 +1,26 @@
 export default {
     table:['Pos', 'Club', 'Pl', 'GD', 'Pts'],
-    ARS: [1, 'Arsenal', 0, 0, 0],
+    clubs: [
+        [1, 'Arsenal', 0, 0, 0],
+        [2, 'Bournemouth', 0, 0, 0],
+        [3, 'Brighton', 0, 0, 0],
+        [4, 'Burnley', 0, 0, 0],
+        [5, 'Cardiff', 0, 0, 0],
+        [6, 'Chelsea', 0, 0, 0],
+        [7, 'Crystal Palace', 0, 0, 0],
+        [8, 'Everton', 0, 0, 0],
+        [9, 'Fulham', 0, 0, 0],
+        [10, 'Huddersfield', 0, 0, 0],
+        [11, 'Leicester', 0, 0, 0],
+        [12, 'Liverpool', 0, 0, 0],
+        [13, 'Man City', 0, 0, 0],
+        [14, 'Man Utd', 0, 0, 0],
+        [15, 'Newcastle', 0, 0, 0],
+        [16, 'Southampton', 0, 0, 0],
+        [17, 'Spurs', 0, 0, 0],
+        [18, 'Watford', 0, 0, 0],
+        [19, 'West Ham', 0, 0, 0],
+        [20, 'Wolves', 0, 0, 0]],
     teams:[
         {
             name: 'Arsenal',

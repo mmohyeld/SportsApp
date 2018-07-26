@@ -8,6 +8,7 @@ import ManUtd from './ManUtd';
 import Example from './Example';
 import LeagueTable from './LeagueTable';
 import MunLei from './MunLei';
+import PlayerPage from './PlayerPage';
 
 const TabStack = createMaterialTopTabNavigator(
   {
@@ -42,6 +43,14 @@ const RootStack = createStackNavigator(
     },
     Game: {
       screen: MunLei,
+      navigationOptions: ({ navigation }) => ({
+        title: 'PREMIER LEAGUE',
+        headerStyle: {backgroundColor:'#38003C'},
+        headerTitleStyle: {color: '#fff', fontWeight: 'bold', fontSize: 25 },
+      }),
+    },
+    Player: {
+      screen: PlayerPage,
       navigationOptions: ({ navigation }) => ({
         title: 'PREMIER LEAGUE',
         headerStyle: {backgroundColor:'#38003C'},

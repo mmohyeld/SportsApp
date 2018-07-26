@@ -17,7 +17,7 @@ export default class LeagueTable extends React.Component {
         <ScrollView>
           <Table borderStyle={{borderWidth: 2, borderColor: '#c8e1ff'}}>
             <Row data={PremTeams['table']} style={styles.tableHead} textStyle={styles.tableText}/>
-            <Row data={PremTeams['ARS']} textStyle={styles.tableText}/>
+            <Rows data={PremTeams['clubs']} textStyle={styles.tableText}/>
           </Table>
           <View style={styles.listContainer}>
             <List containerStyle={{marginBottom: 20}}>

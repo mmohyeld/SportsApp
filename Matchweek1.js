@@ -1,11 +1,9 @@
-import PremTeams from './PremTeams';
-
 export default {
     saturday:[
         {
             id: 2,
             homeTeam: 'NEW',
-            homeLogo: PremTeams['teams'][14].avatar_url,
+            homeLogo: require('./assets/images/premier_league/new.png'),
             time: '07:30 AM',
             awayTeam: 'TOT',
             awayLogo: require('./assets/images/premier_league/tot.png'),
