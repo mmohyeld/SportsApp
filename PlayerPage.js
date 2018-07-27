@@ -1,9 +1,31 @@
 import React from 'react';
 import { StyleSheet, Text, View, Component, TouchableHighlight, Image, SectionList, Platform, ScrollView, StatusBar } from 'react-native';
 import { List, ListItem } from 'react-native-elements';
+import { Table, TableWrapper, Row, Rows, Col, Cols, Cell } from 'react-native-table-component';
 import ManUtdPlayers from './ManUtdPlayers';
 
 export default class PlayerPage extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      tableHead: ['', 'Head1', 'Head2', 'Head3'],
+      tableTitle: ['Nationality', 'D.O.B', 'Age', 'Height'],
+      tableData: [
+        ['Spain'],
+        ['07/11/1990'],
+        ['27'],
+        ['192cm']
+      ],
+      statsTitle: ['Appearances', 'Clean Sheets', 'Goals', 'Assits'],
+      statsData: [
+        ['237'],
+        ['93'],
+        ['0'],
+        ['0']
+      ],
+    }
+  }
+
   render() {
     return (
       <View style={styles.container}>
@@ -16,11 +38,22 @@ export default class PlayerPage extends React.Component {
             <Text style={styles.teamName}>David De Gea</Text>
           </View>
         </View>
-        <Text style={styles.title}>Personal Details</Text>
-        <Text style={styles.paragraph}>Nationality: Spain</Text>
-        <Text style={styles.paragraph}>D.O.B.:  07/11/1990</Text>
-        <Text style={styles.paragraph}>Age: 27</Text>
-        <Text style={styles.paragraph}>Height:  192cm</Text>
+        <View padding={10}>
+          <Text style={styles.title}>Personal Details</Text>
+          <Table borderStyle={{borderColor: '#fff'}}>
+            <TableWrapper style={styles.wrapper}>
+              <Col data={this.state.tableTitle} style={styles.tableTitle} heightArr={[28,28]} textStyle={styles.colText}/>
+              <Rows data={this.state.tableData} flexArr={[1]} style={styles.row} textStyle={styles.rowText}/>
+            </TableWrapper>
+          </Table>
+          <Text style={styles.title}>All Time Stats</Text>
+          <Table borderStyle={{borderColor: '#fff'}}>
+            <TableWrapper style={styles.wrapper}>
+              <Col data={this.state.statsTitle} style={styles.tableTitle} heightArr={[28,28]} textStyle={styles.colText}/>
+              <Rows data={this.state.statsData} flexArr={[1]} style={styles.row} textStyle={styles.rowText}/>
+            </TableWrapper>
+          </Table>
+        </View>
       </View>
     );
   }
@@ -80,4 +113,10 @@ const styles = StyleSheet.create({
     position: 'relative',
     marginBottom: 10
   },
+  head: {  height: 40,  backgroundColor: '#fff'  },
+  wrapper: { flexDirection: 'row' },
+  tableTitle: { flex: 1, backgroundColor: '#fff' },
+  row: {  height: 28  },
+  colText: { textAlign: 'left' },
+  rowText: { textAlign: 'right' },
 });
