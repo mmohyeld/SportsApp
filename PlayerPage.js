@@ -27,15 +27,20 @@ export default class PlayerPage extends React.Component {
   }
 
   render() {
+    const {navigation} = this.props;
+    const playerName = navigation.getParam('name', 'default');
+    const playerPhoto = navigation.getParam('photo', 'https://premierleague-static-files.s3.amazonaws.com/premierleague/photos/players/250x250/man134.png');
+    const personalData = navigation.getParam('personal', this.state.tableData)
+    const teamColour = navigation.getParam('colour', '#d81920')
     return (
       <View style={styles.container}>
         <StatusBar 
           barStyle='light-content'
         />
-        <View style={styles.headerContainer}>
+        <View style={[styles.headerContainer, {backgroundColor: teamColour}]}>
           <View style={styles.team}>
-            <Image style={styles.teamLogo} source={{uri:ManUtdPlayers['players'][0].avatar_url}} />
-            <Text style={styles.teamName}>David De Gea</Text>
+            <Image style={styles.teamLogo} source={{uri:playerPhoto}} />
+            <Text style={styles.teamName}>{playerName}</Text>
           </View>
         </View>
         <View padding={10}>
@@ -43,7 +48,7 @@ export default class PlayerPage extends React.Component {
           <Table borderStyle={{borderColor: '#fff'}}>
             <TableWrapper style={styles.wrapper}>
               <Col data={this.state.tableTitle} style={styles.tableTitle} heightArr={[28,28]} textStyle={styles.colText}/>
-              <Rows data={this.state.tableData} flexArr={[1]} style={styles.row} textStyle={styles.rowText}/>
+              <Rows data={personalData} flexArr={[1]} style={styles.row} textStyle={styles.rowText}/>
             </TableWrapper>
           </Table>
           <Text style={styles.title}>All Time Stats</Text>

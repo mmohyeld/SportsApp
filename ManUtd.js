@@ -5,15 +5,19 @@ import ManUtdPlayers from './ManUtdPlayers';
 
 export default class ManUtd extends React.Component {
   render() {
+    const {navigation} = this.props;
+    const teamName = navigation.getParam('name', 'default');
+    const teamPhoto = navigation.getParam('photo', './assets/images/premier_league/mun.png');
+    const teamColour = navigation.getParam('colour', '#d81920')
     return (
       <View style={styles.container}>
         <StatusBar 
           barStyle='light-content'
         />
-        <View style={styles.headerContainer}>
+        <View style={[styles.headerContainer, {backgroundColor: teamColour}]}>
           <View style={styles.team}>
-            <Image style={styles.teamLogo} source={require('./assets/images/premier_league/mun.png')} />
-            <Text style={styles.teamName}>Manchester United</Text>
+            <Image style={styles.teamLogo} source={teamPhoto} />
+            <Text style={styles.teamName}>{teamName}</Text>
           </View>
         </View>
         <ScrollView>
@@ -42,7 +46,7 @@ export default class ManUtd extends React.Component {
                   key={i}
                   title={l.name}
                   subtitle={l.subtitle}
-                  onPress={() => this.props.navigation.navigate('Player')}
+                  onPress={() => this.props.navigation.navigate('Player', {name: l.name, photo: l.avatar_url, personal: l.personal, colour: teamColour})}
                 />
                 ))
               }
