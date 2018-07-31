@@ -29,7 +29,11 @@ export default class LeagueTable extends React.Component {
                   key={i}
                   title={l.name}
                   subtitle={l.subtitle}
-                  onPress={() => this.props.navigation.navigate('Details', {name: l.name, photo: l.avatar_url, colour: l.colour})}
+                  onPress={() => this.props.navigation.navigate('Details', {name: l.name, 
+                    photo: l.avatar_url, 
+                    colour: l.colour,
+                    roster: l.roster
+                  })}
                 />
                 ))
               }

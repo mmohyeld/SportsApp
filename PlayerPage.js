@@ -16,7 +16,8 @@ export default class PlayerPage extends React.Component {
         ['27'],
         ['192cm']
       ],
-      statsTitle: ['Appearances', 'Clean Sheets', 'Goals', 'Assits'],
+      gkStats: ['Appearances', 'Clean Sheets', 'Goals', 'Assits'],
+      playerStats: ['Appearances', 'Goals', 'Assits'],
       statsData: [
         ['237'],
         ['93'],
@@ -32,6 +33,8 @@ export default class PlayerPage extends React.Component {
     const playerPhoto = navigation.getParam('photo', 'https://premierleague-static-files.s3.amazonaws.com/premierleague/photos/players/250x250/man134.png');
     const personalData = navigation.getParam('personal', this.state.tableData)
     const teamColour = navigation.getParam('colour', '#d81920')
+    const allTimeStats = navigation.getParam('allTime', this.state.statsData)
+    const posn = navigation.getParam('pos', 'GoalKeeper')
     return (
       <View style={styles.container}>
         <StatusBar 
@@ -54,8 +57,9 @@ export default class PlayerPage extends React.Component {
           <Text style={styles.title}>All Time Stats</Text>
           <Table borderStyle={{borderColor: '#fff'}}>
             <TableWrapper style={styles.wrapper}>
-              <Col data={this.state.statsTitle} style={styles.tableTitle} heightArr={[28,28]} textStyle={styles.colText}/>
-              <Rows data={this.state.statsData} flexArr={[1]} style={styles.row} textStyle={styles.rowText}/>
+              <Col data={posn == 'Goalkeeper' ? this.state.gkStats: this.state.playerStats} 
+              style={styles.tableTitle} heightArr={[28,28]} textStyle={styles.colText}/>
+              <Rows data={allTimeStats} flexArr={[1]} style={styles.row} textStyle={styles.rowText}/>
             </TableWrapper>
           </Table>
         </View>

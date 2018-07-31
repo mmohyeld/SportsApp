@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, Component, TouchableHighlight, Image, SectionList, Platform, ScrollView, StatusBar } from 'react-native';
 import { List, ListItem } from 'react-native-elements';
-import ManUtdPlayers from './ManUtdPlayers';
+import ArsenalPlayers from './ArsenalPlayers';
 
 export default class ManUtd extends React.Component {
   render() {
@@ -9,6 +9,7 @@ export default class ManUtd extends React.Component {
     const teamName = navigation.getParam('name', 'default');
     const teamPhoto = navigation.getParam('photo', './assets/images/premier_league/mun.png');
     const teamColour = navigation.getParam('colour', '#d81920')
+    const roster = navigation.getParam('roster', ArsenalPlayers)
     return (
       <View style={styles.container}>
         <StatusBar 
@@ -24,7 +25,7 @@ export default class ManUtd extends React.Component {
           <View style={styles.listContainer}>
             <List containerStyle={{marginBottom: 20}}>
               {
-                ManUtdPlayers['manager'].map((l, i) => (
+                roster['manager'].map((l, i) => (
                 <ListItem
                   roundAvatar
                   avatar={{uri:l.avatar_url}}
@@ -39,14 +40,20 @@ export default class ManUtd extends React.Component {
           <View style={styles.listContainer}>
             <List containerStyle={{marginBottom: 20}}>
               {
-                ManUtdPlayers['players'].map((l, i) => (
+                roster['players'].map((l, i) => (
                 <ListItem
                   roundAvatar
                   avatar={{uri:l.avatar_url}}
                   key={i}
                   title={l.name}
                   subtitle={l.subtitle}
-                  onPress={() => this.props.navigation.navigate('Player', {name: l.name, photo: l.avatar_url, personal: l.personal, colour: teamColour})}
+                  onPress={() => this.props.navigation.navigate('Player', {name: l.name, 
+                    photo: l.avatar_url, 
+                    personal: l.personal, 
+                    colour: teamColour,
+                    allTime: l.allTimeStats,
+                    pos: l.subtitle
+                  })}
                 />
                 ))
               }
