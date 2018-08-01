@@ -1,5 +1,8 @@
 import ArsenalPlayers from './ArsenalPlayers';
 import ManUtdPlayers from './ManUtdPlayers';
+import ManCityPlayers from './ManCityPlayers';
+import ChelseaPlayers from './ChelseaPlayers';
+import LiverpoolPlayers from './LiverpoolPlayers';
 
 export default {
     table:['Pos', 'Club', 'Pl', 'GD', 'Pts'],
@@ -71,7 +74,7 @@ export default {
             subtitle: 'CHE',
             pos: 6, pl: 0, gd: 0, pts: 0,
             colour: '#0a4595',
-            roster: ArsenalPlayers
+            roster: ChelseaPlayers
         },
         {
             name: 'Crystal Palace',
@@ -119,7 +122,7 @@ export default {
             subtitle: 'LIV',
             pos: 12, pl: 0, gd: 0, pts: 0,
             colour: '#e31b23',
-            roster: ArsenalPlayers
+            roster: LiverpoolPlayers
         },
         {
             name: 'Manchester City',
@@ -127,7 +130,7 @@ export default {
             subtitle: 'MCI',
             pos: 13, pl: 0, gd: 0, pts: 0,
             colour: '#6caee0',
-            roster: ArsenalPlayers
+            roster: ManCityPlayers
         },
         {
             name: 'Manchester United',
