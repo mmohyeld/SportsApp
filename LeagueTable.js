@@ -15,9 +15,9 @@ export default class LeagueTable extends React.Component {
           <Text style={styles.weekTitle}>League Table</Text>
         </View>
         <ScrollView>
-          <Table borderStyle={{borderWidth: 2, borderColor: '#c8e1ff'}}>
-            <Row data={PremTeams['table']} style={styles.tableHead} textStyle={styles.tableText}/>
-            <Rows data={PremTeams['clubs']} textStyle={styles.tableText}/>
+          <Table borderStyle={{borderWidth: 0}}>
+            <Row data={PremTeams['table']} flexArr={[1,2,1,1,1]}  style={styles.tableHead} textStyle={[styles.tableText, {color: '#fff'}]}/>
+            <Rows data={PremTeams['clubs']} flexArr={[1,2,1,1,1]} textStyle={styles.tableText}/>
           </Table>
           <View style={styles.listContainer}>
             <List containerStyle={{marginBottom: 20}}>
@@ -99,7 +99,7 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    backgroundColor: '#00ff85',
+    backgroundColor: '#fff',
   },
   buttonContainer: {
     margin: 20
@@ -118,9 +118,10 @@ const styles = StyleSheet.create({
   },
   tableHead: {
     height: 40,
-    backgroundColor: '#f1f8ff',
+    backgroundColor: '#e90052',
+    borderColor: '#e90052'
   },
   tableText: {
-    margin: 6,
+    margin: 6
   },
 });
