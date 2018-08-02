@@ -3,6 +3,7 @@ import ManUtdPlayers from './ManUtdPlayers';
 import ManCityPlayers from './ManCityPlayers';
 import ChelseaPlayers from './ChelseaPlayers';
 import LiverpoolPlayers from './LiverpoolPlayers';
+import SpursPlayers from './SpursPlayers';
 
 export default {
     table:['Pos', 'Club', 'Pl', 'GD', 'Pts'],
@@ -162,7 +163,7 @@ export default {
             subtitle: 'TOT',
             pos: 17, pl: 0, gd: 0, pts: 0,
             colour: '#f5f5f5',
-            roster: ArsenalPlayers
+            roster: SpursPlayers
         },
         {
             name: 'Watford',

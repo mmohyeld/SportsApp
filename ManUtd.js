@@ -18,7 +18,7 @@ export default class ManUtd extends React.Component {
         <View style={[styles.headerContainer, {backgroundColor: teamColour}]}>
           <View style={styles.team}>
             <Image style={styles.teamLogo} source={teamPhoto} />
-            <Text style={styles.teamName}>{teamName}</Text>
+            <Text style={[styles.teamName, {color: teamColour == '#f5f5f5' || teamColour == '#fe0' ? '#333': '#fff'}]}>{teamName}</Text>
           </View>
         </View>
         <ScrollView>
