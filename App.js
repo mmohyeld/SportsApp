@@ -9,11 +9,13 @@ import Example from './Example';
 import LeagueTable from './LeagueTable';
 import MunLei from './MunLei';
 import PlayerPage from './PlayerPage';
+import LeagueTeams from './LeagueTeams';
 
 const TabStack = createMaterialTopTabNavigator(
   {
     Fixtures: {screen: Example},
     Table: {screen: LeagueTable},
+    Teams: {screen: LeagueTeams},
   },
   {
     tabBarOptions: {

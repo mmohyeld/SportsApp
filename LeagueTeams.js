@@ -4,7 +4,7 @@ import { List, ListItem } from 'react-native-elements';
 import { Table, TableWrapper, Row, Rows, Col, Cols, Cell } from 'react-native-table-component';
 import PremTeams from './PremTeams';
 
-export default class LeagueTable extends React.Component {
+export default class LeagueTeams extends React.Component {
   render() {
     return (
       <View style={styles.container}>
@@ -12,27 +12,28 @@ export default class LeagueTable extends React.Component {
           barStyle='light-content'
         />
         <View style={styles.weekContainer}>
-          <Text style={styles.weekTitle}>League Table</Text>
+          <Text style={styles.weekTitle}>Teams</Text>
         </View>
         <ScrollView>
-          <Table borderStyle={{borderWidth: 0}}>
-            <Row data={PremTeams['table']} flexArr={[1,2,1,1,1]}  style={styles.tableHead} textStyle={[styles.tableText, {color: '#fff'}]}/>
-            {
-              PremTeams['teams'].map((l, i) => (
-              <Row
-                data={l.stats}
-                key={l.subtitle}
-                flexArr={[1,2,1,1,1]}
-                textStyle={styles.tableText}
-                onPress={() => this.props.navigation.navigate('Details', {name: l.name, 
-                  photo: l.avatar_url, 
-                  colour: l.colour,
-                  roster: l.roster
-                })}
-              />
-              ))
-            }
-          </Table>
+          <View style={styles.listContainer}>
+            <List containerStyle={{marginBottom: 0, marginTop: 0}}>
+              {
+                PremTeams['teams'].map((l, i) => (
+                <ListItem
+                  roundAvatar
+                  avatar={l.avatar_url}
+                  key={i}
+                  title={l.name}
+                  onPress={() => this.props.navigation.navigate('Details', {name: l.name, 
+                    photo: l.avatar_url, 
+                    colour: l.colour,
+                    roster: l.roster
+                  })}
+                />
+                ))
+              }
+            </List>
+          </View>
         </ScrollView>
       </View>
     );
@@ -49,7 +50,7 @@ const styles = StyleSheet.create({
     marginBottom: 10
   },
   listContainer: {
-    paddingTop: 22,
+    paddingTop: 0,
   },
   team: {
     alignItems: 'center',
