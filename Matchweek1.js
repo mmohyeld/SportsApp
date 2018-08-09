@@ -1,4 +1,14 @@
 export default {
+    friday: [
+        {
+            id: 1,
+            homeTeam: 'MUN',
+            homeLogo: require('./assets/images/premier_league/mun.png'),
+            time: '03:00 PM',
+            awayTeam: 'LEI',
+            awayLogo: require('./assets/images/premier_league/lei.png'),
+        },
+    ],
     saturday:[
         {
             id: 2,
