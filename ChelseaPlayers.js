@@ -15,11 +15,11 @@ export default {
             allTimeStats: [['26'],['8'],['0'],['0']]
         },
         {
-            name: 'Thibaut Courtois',
-            avatar_url: 'https://premierleague-static-files.s3.amazonaws.com/premierleague/photos/players/250x250/p60772.png',
+            name: 'Kepa Arrizabalaga',
+            avatar_url: 'https://premierleague-static-files.s3.amazonaws.com/premierleague/photos/players/250x250/Photo-Missing.png',
             subtitle: 'Goalkeeper',
-            personal: [['Belgium'],['11/05/1992'],['26'],['199cm']],
-            allTimeStats: [['126'],['48'],['0'],['0']]
+            personal: [['Spain'],['03/10/1994'],['23'],['189cm']],
+            allTimeStats: [['1'],['1'],['0'],['0']]
         },
         {
             name: 'Robert Green',

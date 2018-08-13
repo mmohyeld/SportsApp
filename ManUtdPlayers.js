@@ -12,7 +12,7 @@ export default {
             avatar_url: 'https://premierleague-static-files.s3.amazonaws.com/premierleague/photos/players/250x250/p51940.png',
             subtitle: 'Goalkeeper',
             personal: [['Spain'],['07/11/1990'],['27'],['192cm']],
-            allTimeStats: [['237'],['93'],['0'],['0']]
+            allTimeStats: [['238'],['93'],['0'],['0']]
         },
         {
             name: 'Sergio Romero',
@@ -20,13 +20,6 @@ export default {
             subtitle: 'Goalkeeper',
             personal: [['Argentina'],['22/02/1987'],['31'],['192cm']],
             allTimeStats: [['7'],['6'],['0'],['0']]
-        },
-        {
-            name: 'Joel Periera',
-            avatar_url: 'https://premierleague-static-files.s3.amazonaws.com/premierleague/photos/players/250x250/p168196.png',
-            subtitle: 'Goalkeeper',
-            personal: [['Portugal'],['28/06/1996'],['22'],['188cm']],
-            allTimeStats: [['1'],['1'],['0'],['0']]
         },
         {
             name: 'Lee Grant',
@@ -41,14 +34,14 @@ export default {
             avatar_url: 'https://premierleague-static-files.s3.amazonaws.com/premierleague/photos/players/250x250/p184667.png',
             subtitle: 'Defender',
             personal: [['Sweden'],['17/07/1994'],['24'],['187cm']],
-            allTimeStats: [['17'],['0'],['0']]
+            allTimeStats: [['18'],['0'],['0']]
         },
         {
             name: 'Eric Bailly',
             avatar_url: 'https://premierleague-static-files.s3.amazonaws.com/premierleague/photos/players/250x250/p197365.png',
             subtitle: 'Defender',
             personal: [['Cote D\'Ivoire'],['12/04/1994'],['24'],['187cm']],
-            allTimeStats: [['38'],['1'],['0']]
+            allTimeStats: [['39'],['1'],['0']]
         },
         {
             name: 'Phil Jones',
@@ -83,7 +76,7 @@ export default {
             avatar_url: 'https://premierleague-static-files.s3.amazonaws.com/premierleague/photos/players/250x250/p106760.png',
             subtitle: 'Defender',
             personal: [['England'],['12/07/1995'],['23'],['185cm']],
-            allTimeStats: [['103'],['0'],['3']]
+            allTimeStats: [['104'],['1'],['3']]
         },
         {
             name: 'Antonio Valencia',
@@ -97,7 +90,7 @@ export default {
             avatar_url: 'https://premierleague-static-files.s3.amazonaws.com/premierleague/photos/players/250x250/p40002.png',
             subtitle: 'Defender',
             personal: [['Italy'],['02/12/1989'],['28'],['182cm']],
-            allTimeStats: [['54'],['1'],['0']]
+            allTimeStats: [['55'],['1'],['0']]
         },
         {
             name: 'Diogo Dalot',
@@ -113,27 +106,20 @@ export default {
             personal: [['Netherlands'],['02/01/1998'],['20'],['190cm']],
             allTimeStats: [['33'],['0'],['1']]
         },
-        {
-            name: 'Axel Tuanzebe',
-            avatar_url: 'https://premierleague-static-files.s3.amazonaws.com/premierleague/photos/players/250x250/p180804.png',
-            subtitle: 'Defender',
-            personal: [['England'],['14/11/1997'],['20'],['182cm']],
-            allTimeStats: [['5'],['0'],['0']]
-        },
 
         {
             name: 'Paul Pogba',
             avatar_url: 'https://premierleague-static-files.s3.amazonaws.com/premierleague/photos/players/250x250/p74208.png',
             subtitle: 'Midfielder',
             personal: [['France'],['15/03/1993'],['25'],['191cm']],
-            allTimeStats: [['60'],['11'],['14']]
+            allTimeStats: [['61'],['12'],['14']]
         },
         {
             name: 'Juan Mata',
             avatar_url: 'https://premierleague-static-files.s3.amazonaws.com/premierleague/photos/players/250x250/p43670.png',
             subtitle: 'Midfielder',
             personal: [['Spain'],['28/04/1988'],['30'],['170cm']],
-            allTimeStats: [['221'],['48'],['48']]
+            allTimeStats: [['222'],['48'],['49']]
         },
         {
             name: 'Jesse Lingard',
@@ -154,7 +140,7 @@ export default {
             avatar_url: 'https://premierleague-static-files.s3.amazonaws.com/premierleague/photos/players/250x250/p41184.png',
             subtitle: 'Midfielder',
             personal: [['Belgium'],['22/11/1987'],['30'],['194cm']],
-            allTimeStats: [['246'],['37'],['15']] 
+            allTimeStats: [['247'],['37'],['15']] 
         },
         {
             name: 'Nemanja Matic',
@@ -168,21 +154,21 @@ export default {
             avatar_url: 'https://premierleague-static-files.s3.amazonaws.com/premierleague/photos/players/250x250/p195851.png',
             subtitle: 'Midfielder',
             personal: [['Scotland'],['08/12/1996'],['21'],['193cm']],
-            allTimeStats: [['15'],['0'],['0']] 
+            allTimeStats: [['16'],['0'],['0']] 
         },
         {
             name: 'Fred',
             avatar_url: 'https://premierleague-static-files.s3.amazonaws.com/premierleague/photos/players/250x250/p101582.png',
             subtitle: 'Midfielder',
             personal: [['Brazil'],['05/03/1993'],['25'],['169cm']],
-            allTimeStats: [['0'],['0'],['0']] 
+            allTimeStats: [['1'],['0'],['0']] 
         },
         {
             name: 'Andreas Pereira',
             avatar_url: 'https://premierleague-static-files.s3.amazonaws.com/premierleague/photos/players/250x250/p156689.png',
             subtitle: 'Midfielder',
             personal: [['Brazil'],['01/01/1996'],['22'],['178cm']],
-            allTimeStats: [['5'],['0'],['0']] 
+            allTimeStats: [['6'],['0'],['0']] 
         },
 
         {
@@ -190,14 +176,14 @@ export default {
             avatar_url: 'https://premierleague-static-files.s3.amazonaws.com/premierleague/photos/players/250x250/p37265.png',
             subtitle: 'Forward',
             personal: [['Chile'],['19/12/1988'],['29'],['169cm']],
-            allTimeStats: [['134'],['62'],['28']] 
+            allTimeStats: [['135'],['62'],['28']] 
         },
         {
             name: 'Romelu Lukaku',
             avatar_url: 'https://premierleague-static-files.s3.amazonaws.com/premierleague/photos/players/250x250/p66749.png',
             subtitle: 'Forward',
             personal: [['Belgium'],['13/05/1993'],['25'],['190cm']],
-            allTimeStats: [['220'],['101'],['35']] 
+            allTimeStats: [['221'],['101'],['35']] 
         },
         {
             name: 'Anthony Martial',
@@ -211,7 +197,7 @@ export default {
             avatar_url: 'https://premierleague-static-files.s3.amazonaws.com/premierleague/photos/players/250x250/p176297.png',
             subtitle: 'Forward',
             personal: [['England'],['31/10/1997'],['20'],['180cm']],
-            allTimeStats: [['78'],['17'],['8']] 
+            allTimeStats: [['79'],['17'],['8']] 
         },
     ]
 }

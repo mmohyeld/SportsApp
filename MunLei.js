@@ -10,6 +10,8 @@ export default class MunLei extends React.Component {
     const homeLogo = navigation.getParam('homeLogo', './assets/images/premier_league/mun.png');
     const awayTeam = navigation.getParam('awayTeam', 'default')
     const awayLogo = navigation.getParam('awayLogo', './assets/images/premier_league/mun.png')
+    const homeScore = navigation.getParam('homeScore', 0);
+    const awayScore = navigation.getParam('awayScore', 0)
     return (
       <View style={styles.container}>
         <StatusBar 
@@ -24,13 +26,13 @@ export default class MunLei extends React.Component {
           <View style={styles.gameInfo}>
             <View style={styles.infoScorePanel}>
               <View style={styles.infoScoreBlock}>
-                <Text style={styles.infoScore}>0</Text>
+                <Text style={styles.infoScore}>{homeScore}</Text>
               </View>
               <View style={styles.infoScoreBlock}>
                 <Text style={styles.infoScore}>|</Text>
               </View>
               <View style={styles.infoScoreBlock}>
-                <Text style={styles.infoScore}>0</Text>
+                <Text style={styles.infoScore}>{awayScore}</Text>
               </View>
             </View>
           </View>
@@ -40,9 +42,9 @@ export default class MunLei extends React.Component {
             <Text style={styles.teamName}>{awayTeam}</Text>
           </View>
         </View>
-        <Text style={styles.title}>Preview</Text>
-        <Text style={styles.paragraph}>The Premier League is set to kick-off on August 10th with showdown at Old Trafford between
-        Manchester United and Leicester City.</Text>
+        <Text style={styles.title}>Review</Text>
+        <Text style={styles.paragraph}>Paul Pogba and Luke Shaw scored as Manchester United kicked 
+        off the 2018/19 Premier League season with a 2-1 victory over Leicester City. </Text>
       </View>
     );
   }

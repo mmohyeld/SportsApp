@@ -21,7 +21,9 @@ export default class Example extends React.Component {
                             onPress={() => this.props.navigation.navigate('Game', {homeTeam: l.homeTeam, 
                                 homeLogo: l.homeLogo, 
                                 awayTeam: l.awayTeam,
-                                awayLogo: l.awayLogo
+                                awayLogo: l.awayLogo,
+                                homeScore: l.homeScore,
+                                awayScore: l.awayScore,
                               })}
                             key={l.id}>
                             <View style={[styles.panelContainer, {backgroundColor: '#e90052'}]}>
@@ -50,7 +52,9 @@ export default class Example extends React.Component {
                             onPress={() => this.props.navigation.navigate('Game', {homeTeam: l.homeTeam, 
                                 homeLogo: l.homeLogo, 
                                 awayTeam: l.awayTeam,
-                                awayLogo: l.awayLogo
+                                awayLogo: l.awayLogo,
+                                homeScore: l.homeScore,
+                                awayScore: l.awayScore,
                               })}
                             key={l.id}>
                             <View style={[styles.panelContainer, {backgroundColor: '#e90052'}]}>
@@ -79,7 +83,9 @@ export default class Example extends React.Component {
                             onPress={() => this.props.navigation.navigate('Game', {homeTeam: l.homeTeam, 
                                 homeLogo: l.homeLogo, 
                                 awayTeam: l.awayTeam,
-                                awayLogo: l.awayLogo
+                                awayLogo: l.awayLogo,
+                                homeScore: l.homeScore,
+                                awayScore: l.awayScore,
                               })}
                             key={l.id}>
                             <View style={[styles.panelContainer, {backgroundColor: '#e90052'}]}>

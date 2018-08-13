@@ -14,7 +14,7 @@ export default {
             subtitle: 'ARS',
             colour: '#fe0002',
             roster: ArsenalPlayers,
-            stats: [1, 'Arsenal', 0, 0, 0]
+            stats: [1, 'Arsenal', 1, '-2', 0]
         },
         {
             name: 'Bournemouth',
@@ -22,7 +22,7 @@ export default {
             subtitle: 'BOU',
             colour: '#e62333',
             roster: ArsenalPlayers,
-            stats: [2, 'Bournemouth', 0, 0, 0]
+            stats: [2, 'Bournemouth', 1, '+2', 3]
         },
         {
             name: 'Brighton',
@@ -30,7 +30,7 @@ export default {
             subtitle: 'BHA',
             colour: '#0054a6',
             roster: ArsenalPlayers,
-            stats: [3, 'Brighton', 0, 0, 0]
+            stats: [3, 'Brighton', 1, '-2', 0]
         },
         {
             name: 'Burnley',
@@ -38,7 +38,7 @@ export default {
             subtitle: 'BUR',
             colour: '#6a003a',
             roster: ArsenalPlayers,
-            stats: [4, 'Burnley', 0, 0, 0]
+            stats: [4, 'Burnley', 1, '0', 1]
         },
         {
             name: 'Cardiff',
@@ -46,7 +46,7 @@ export default {
             subtitle: 'CAR',
             colour: '#035daa',
             roster: ArsenalPlayers,
-            stats: [5, 'Cardiff', 0, 0, 0]
+            stats: [5, 'Cardiff', 1, '-2', 0]
         },
         {
             name: 'Chelsea',
@@ -54,7 +54,7 @@ export default {
             subtitle: 'CHE',
             colour: '#0a4595',
             roster: ChelseaPlayers,
-            stats: [6, 'Chelsea', 0, 0, 0]
+            stats: [6, 'Chelsea', 1, '+3', 3]
         },
         {
             name: 'Crystal Palace',
@@ -62,7 +62,7 @@ export default {
             subtitle: 'CRY',
             colour: '#eb302e',
             roster: ArsenalPlayers,
-            stats: [7, 'Crystal Palace', 0, 0, 0]
+            stats: [7, 'Crystal Palace', 1, '+2', 3]
         },
         {
             name: 'Everton',
@@ -70,7 +70,7 @@ export default {
             subtitle: 'EVE',
             colour: '#00369c',
             roster: ArsenalPlayers,
-            stats: [8, 'Everton', 0, 0, 0]
+            stats: [8, 'Everton', 1, '0', 1]
         },
         {
             name: 'Fulham',
@@ -78,7 +78,7 @@ export default {
             subtitle: 'FUL',
             colour: '#f5f5f5',
             roster: ArsenalPlayers,
-            stats: [9, 'Fulham', 0, 0, 0]
+            stats: [9, 'Fulham', 1, '-2', 0]
         },
         {
             name: 'Huddersfield',
@@ -86,7 +86,7 @@ export default {
             subtitle: 'HUD',
             colour: '#f5f5f5',
             roster: ArsenalPlayers,
-            stats: [10, 'Huddersfield', 0, 0, 0]
+            stats: [10, 'Huddersfield', 1, '-3', 0]
         },
         {
             name: 'Leicester City',
@@ -94,7 +94,7 @@ export default {
             subtitle: 'LEI',
             colour: '#273e8a',
             roster: ArsenalPlayers,
-            stats: [11, 'Leicester', 0, 0, 0]
+            stats: [11, 'Leicester', 1, '-1', 0]
         },
         {
             name: 'Liverpool',
@@ -102,7 +102,7 @@ export default {
             subtitle: 'LIV',
             colour: '#e31b23',
             roster: LiverpoolPlayers,
-            stats: [12, 'Liverpool', 0, 0, 0]
+            stats: [12, 'Liverpool', 1, '+4', 3]
         },
         {
             name: 'Manchester City',
@@ -110,7 +110,7 @@ export default {
             subtitle: 'MCI',
             colour: '#6caee0',
             roster: ManCityPlayers,
-            stats: [13, 'Man City', 0, 0, 0]
+            stats: [13, 'Man City', 1, '+2', 3]
         },
         {
             name: 'Manchester United',
@@ -118,7 +118,7 @@ export default {
             subtitle: 'MUN',
             colour: '#d81920',
             roster: ManUtdPlayers,
-            stats: [14, 'Man Utd', 0, 0, 0]
+            stats: [14, 'Man Utd', 1, '+1', 3]
         },
         {
             name: 'Newcastle United',
@@ -126,7 +126,7 @@ export default {
             subtitle: 'NEW',
             colour: '#383838',
             roster: ArsenalPlayers,
-            stats: [15, 'Newcastle', 0, 0, 0]
+            stats: [15, 'Newcastle', 1, '-1', 0]
         },
         {
             name: 'Southampton',
@@ -134,7 +134,7 @@ export default {
             subtitle: 'SOU',
             colour: '#d71920',
             roster: ArsenalPlayers,
-            stats: [16, 'Southampton', 0, 0, 0]
+            stats: [16, 'Southampton', 1, '0', 1]
         },
         {
             name: 'Tottenham Hotspurs',
@@ -142,7 +142,7 @@ export default {
             subtitle: 'TOT',
             colour: '#f5f5f5',
             roster: SpursPlayers,
-            stats: [17, 'Spurs', 0, 0, 0]
+            stats: [17, 'Spurs', 1, '+1', 3]
         },
         {
             name: 'Watford',
@@ -150,7 +150,7 @@ export default {
             subtitle: 'WAT',
             colour: '#fe0',
             roster: ArsenalPlayers,
-            stats: [18, 'Watford', 0, 0, 0]
+            stats: [18, 'Watford', 1, '+2', 3]
         },
         {
             name: 'West Ham United',
@@ -158,7 +158,7 @@ export default {
             subtitle: 'WHU',
             colour: '#7d2c3b',
             roster: ArsenalPlayers,
-            stats: [19, 'West Ham', 0, 0, 0]
+            stats: [19, 'West Ham', 1, '-4', 0]
         },
         {
             name: 'Wolverhampton',
@@ -166,7 +166,7 @@ export default {
             subtitle: 'WOL',
             colour: '#f9a01b',
             roster: ArsenalPlayers,
-            stats: [20, 'Wolves', 0, 0, 0]
+            stats: [20, 'Wolves', 1, '0', 1]
         },
     ]
 }
