@@ -4,6 +4,7 @@ import ManCityPlayers from './ManCityPlayers';
 import ChelseaPlayers from './ChelseaPlayers';
 import LiverpoolPlayers from './LiverpoolPlayers';
 import SpursPlayers from './SpursPlayers';
+import EvertonPlayers from './EvertonPlayers';
 
 export default {
     table:['Pos', 'Club', 'Pl', 'GD', 'Pts'],
@@ -69,7 +70,7 @@ export default {
             avatar_url: require('./assets/images/premier_league/eve.png'),
             subtitle: 'EVE',
             colour: '#00369c',
-            roster: ArsenalPlayers,
+            roster: EvertonPlayers,
             stats: [8, 'Everton', 1, '0', 1]
         },
         {
