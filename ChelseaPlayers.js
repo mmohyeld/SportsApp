@@ -16,7 +16,7 @@ export default {
         },
         {
             name: 'Kepa Arrizabalaga',
-            avatar_url: 'https://premierleague-static-files.s3.amazonaws.com/premierleague/photos/players/250x250/Photo-Missing.png',
+            avatar_url: 'https://premierleague-static-files.s3.amazonaws.com/premierleague/photos/players/250x250/p109745.png',
             subtitle: 'Goalkeeper',
             personal: [['Spain'],['03/10/1994'],['23'],['189cm']],
             allTimeStats: [['1'],['1'],['0'],['0']]
