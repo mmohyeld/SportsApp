@@ -1,4 +1,5 @@
 export default {
+    days:['','Saturday 18 August', 'Sunday 19 August', 'Monday 20 August'],
     friday: [
         {
             id: 1,
@@ -104,5 +105,7 @@ export default {
             awayLogo: require('./assets/images/premier_league/mci.png'),
             awayScore: 2,
         },
-    ]
+    ],
+    monday: [
+    ],
 }

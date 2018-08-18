@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, TouchableHighlight, Image, StatusBar, ScrollView, Alert } from 'react-native';
 import Matchweek1 from './Matchweek1';
+import Matchweek2 from './Matchweek2';
 
 export default class Example extends React.Component {
     render() {
@@ -10,12 +11,12 @@ export default class Example extends React.Component {
                     barStyle='light-content'
                 />
                 <View style={styles.weekContainer}>
-                    <Text style={styles.weekTitle}>Matchweek 1</Text>
+                    <Text style={styles.weekTitle}>Matchweek 2</Text>
                 </View>
                 <ScrollView>
-                    <Text style={styles.dayTitle}>Friday 10 August</Text>
+                    <Text style={styles.dayTitle}>{Matchweek2['days'][0]}</Text>
                     {
-                      Matchweek1['friday'].map((l, i) => (
+                      Matchweek2['friday'].map((l, i) => (
                         <TouchableHighlight 
                             underlayColor='transparent'
                             onPress={() => this.props.navigation.navigate('Game', {homeTeam: l.homeTeam, 
@@ -44,9 +45,9 @@ export default class Example extends React.Component {
                         </TouchableHighlight>
                       ))
                     }
-                    <Text style={styles.dayTitle}>Saturday 11 August</Text>
+                    <Text style={styles.dayTitle}>{Matchweek2['days'][1]}</Text>
                     {
-                      Matchweek1['saturday'].map((l, i) => (
+                      Matchweek2['saturday'].map((l, i) => (
                         <TouchableHighlight 
                             underlayColor='transparent'
                             onPress={() => this.props.navigation.navigate('Game', {homeTeam: l.homeTeam, 
@@ -75,9 +76,40 @@ export default class Example extends React.Component {
                         </TouchableHighlight>
                       ))
                     }
-                    <Text style={styles.dayTitle}>Sunday 12 August</Text>
+                    <Text style={styles.dayTitle}>{Matchweek2['days'][2]}</Text>
                     {
-                      Matchweek1['sunday'].map((l, i) => (
+                      Matchweek2['sunday'].map((l, i) => (
+                        <TouchableHighlight 
+                            underlayColor='transparent'
+                            onPress={() => this.props.navigation.navigate('Game', {homeTeam: l.homeTeam, 
+                                homeLogo: l.homeLogo, 
+                                awayTeam: l.awayTeam,
+                                awayLogo: l.awayLogo,
+                                homeScore: l.homeScore,
+                                awayScore: l.awayScore,
+                              })}
+                            key={l.id}>
+                            <View style={[styles.panelContainer, {backgroundColor: '#e90052'}]}>
+                                <View style={styles.team}>
+                                    <Image style={styles.teamLogo} source={l.homeLogo} />
+                                    <Text style={styles.teamName}>{l.homeTeam}</Text>
+                                </View>
+
+                                <View style={styles.gameInfo}>
+                                    <Text style={[styles.infoProcess, styles.processUnstart]}>{l.time}</Text>
+                                </View>
+
+                                <View style={styles.team}>
+                                    <Image style={styles.teamLogo} source={l.awayLogo} />
+                                    <Text style={styles.teamName}>{l.awayTeam}</Text>
+                                </View>
+                            </View>
+                        </TouchableHighlight>
+                      ))
+                    }
+                    <Text style={styles.dayTitle}>{Matchweek2['days'][3]}</Text>
+                    {
+                      Matchweek2['monday'].map((l, i) => (
                         <TouchableHighlight 
                             underlayColor='transparent'
                             onPress={() => this.props.navigation.navigate('Game', {homeTeam: l.homeTeam, 
