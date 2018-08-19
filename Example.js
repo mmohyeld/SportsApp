@@ -56,6 +56,8 @@ export default class Example extends React.Component {
                                 awayLogo: l.awayLogo,
                                 homeScore: l.homeScore,
                                 awayScore: l.awayScore,
+                                goals: l.scorers,
+                                stats: l.stats,
                               })}
                             key={l.id}>
                             <View style={[styles.panelContainer, {backgroundColor: '#e90052'}]}>

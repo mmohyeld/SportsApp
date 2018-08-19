@@ -13,19 +13,8 @@ export default class MunLei extends React.Component {
     const awayLogo = navigation.getParam('awayLogo', './assets/images/premier_league/mun.png')
     const homeScore = navigation.getParam('homeScore', 0);
     const awayScore = navigation.getParam('awayScore', 0);
-    const teams = [homeTeam, awayTeam];
-    const scorers = [['Pedro 9','Mkhitaryan 37'],['Morata 20','Iwobi 41'],['Alonso 81','']]
-    const teams2 = [<Image style={styles.teamIcon} source={homeLogo} />, '', <Image style={styles.teamIcon} source={awayLogo} />];
-    const stats = [
-      ['62.3','Possession %','37.7'],
-      ['24','Shots','15'],
-      ['11','Shots on target','6'],
-      ['5','Corners','1'],
-      ['12','Fouls','9'],
-      ['0','Yellow cards','2'],
-      ['0','Red cards','0'],
-      ['3','Offsides','3'],
-    ]
+    const scorers = navigation.getParam('goals', [[]]);
+    const stats = navigation.getParam('stats', [[]]);
     return (
       <View style={styles.container}>
         <StatusBar 
