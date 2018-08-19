@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, Component, TouchableHighlight, Image, SectionList, Platform, ScrollView, StatusBar, WebView } from 'react-native';
 import { List, ListItem } from 'react-native-elements';
+import { Table, TableWrapper, Row, Rows, Col, Cols, Cell } from 'react-native-table-component';
 import ManUtdPlayers from './ManUtdPlayers';
 
 export default class MunLei extends React.Component {
@@ -11,7 +12,20 @@ export default class MunLei extends React.Component {
     const awayTeam = navigation.getParam('awayTeam', 'default')
     const awayLogo = navigation.getParam('awayLogo', './assets/images/premier_league/mun.png')
     const homeScore = navigation.getParam('homeScore', 0);
-    const awayScore = navigation.getParam('awayScore', 0)
+    const awayScore = navigation.getParam('awayScore', 0);
+    const teams = [homeTeam, awayTeam];
+    const scorers = [['Pedro 9','Mkhitaryan 37'],['Morata 20','Iwobi 41'],['Alonso 81','']]
+    const teams2 = [<Image style={styles.teamIcon} source={homeLogo} />, '', <Image style={styles.teamIcon} source={awayLogo} />];
+    const stats = [
+      ['62.3','Possession %','37.7'],
+      ['24','Shots','15'],
+      ['11','Shots on target','6'],
+      ['5','Corners','1'],
+      ['12','Fouls','9'],
+      ['0','Yellow cards','2'],
+      ['0','Red cards','0'],
+      ['3','Offsides','3'],
+    ]
     return (
       <View style={styles.container}>
         <StatusBar 
@@ -42,9 +56,18 @@ export default class MunLei extends React.Component {
             <Text style={styles.teamName}>{awayTeam}</Text>
           </View>
         </View>
-        <Text style={styles.title}>Review</Text>
-        <Text style={styles.paragraph}>Paul Pogba and Luke Shaw scored as Manchester United kicked 
-        off the 2018/19 Premier League season with a 2-1 victory over Leicester City. </Text>
+        <Text style={styles.title}>Goals</Text>
+        <View>
+          <Table borderStyle={{borderWidth: 2, borderColor: 'transparent'}}>
+            <Rows data={scorers} textStyle={styles.text}/>
+          </Table>
+        </View>
+        <Text style={styles.title}>Match Stats</Text>
+        <View>
+          <Table borderStyle={{borderWidth: 2, borderColor: 'transparent'}}>
+            <Rows data={stats} textStyle={styles.text}/>
+          </Table>
+        </View>
       </View>
     );
   }
@@ -55,6 +78,8 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
   },
+  head: { height: 40, backgroundColor: '#00ff85' },
+  text: { margin: 6, textAlign: 'center', alignItems: 'center' },
   headerContainer: {
     flexDirection: 'row',
     backgroundColor: '#e90052',
@@ -71,6 +96,10 @@ const styles = StyleSheet.create({
   teamLogo: {
     width: 50,
     height: 50,
+  },
+  teamIcon: {
+    width: 35,
+    height: 35
   },
   teamName: {
     color: '#fff',
