@@ -45,18 +45,29 @@ export default class MunLei extends React.Component {
             <Text style={styles.teamName}>{awayTeam}</Text>
           </View>
         </View>
-        <Text style={styles.title}>Goals</Text>
-        <View>
-          <Table borderStyle={{borderWidth: 2, borderColor: 'transparent'}}>
-            <Rows data={scorers} textStyle={styles.text}/>
-          </Table>
-        </View>
-        <Text style={styles.title}>Match Stats</Text>
-        <View>
-          <Table borderStyle={{borderWidth: 2, borderColor: 'transparent'}}>
-            <Rows data={stats} textStyle={styles.text}/>
-          </Table>
-        </View>
+        <ScrollView>
+          <Text style={styles.title}>Goals</Text>
+          <View>
+            <Table borderStyle={{borderWidth: 2, borderColor: 'transparent'}}>
+              {
+                scorers.map((l, i) => (
+                <Row
+                  data={l}
+                  key={i}
+                  textStyle={styles.text}
+                  onPress={() => this.props.navigation.navigate('Video')}
+                />
+                ))
+              }
+            </Table>
+          </View>
+          <Text style={styles.title}>Match Stats</Text>
+          <View>
+            <Table borderStyle={{borderWidth: 2, borderColor: 'transparent'}}>
+              <Rows data={stats} textStyle={styles.text}/>
+            </Table>
+          </View>
+        </ScrollView>
       </View>
     );
   }

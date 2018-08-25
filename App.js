@@ -11,6 +11,7 @@ import MunLei from './MunLei';
 import PlayerPage from './PlayerPage';
 import LeagueTeams from './LeagueTeams';
 import NewsFeed from './NewsFeed';
+import GoalsVideo from './GoalsVideo';
 
 const TabStack = createMaterialTopTabNavigator(
   {
@@ -55,6 +56,14 @@ const RootStack = createStackNavigator(
     },
     Player: {
       screen: PlayerPage,
+      navigationOptions: ({ navigation }) => ({
+        title: 'PREMIER LEAGUE',
+        headerStyle: {backgroundColor:'#38003C'},
+        headerTitleStyle: {color: '#fff', fontWeight: 'bold', fontSize: 25 },
+      }),
+    },
+    Video: {
+      screen: GoalsVideo,
       navigationOptions: ({ navigation }) => ({
         title: 'PREMIER LEAGUE',
         headerStyle: {backgroundColor:'#38003C'},
